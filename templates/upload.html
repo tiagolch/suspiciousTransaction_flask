@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} UPLOAD {% endblock %}
+
+
+{% block nav %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <form > <!-- todo: configurar o formulario -->
+            <div class="h1 text-center strong"><strong>IMPORTAR TRANSAÇÕES</strong></div>
+            <div class="mb-3">
+                <input class="form-control" type="file" id="formFile">
+                <label for="formFile" class="form-label">Selecione o arquivo para realizar o upload</label>
+            </div>
+            <div><button class="btn btn-primary">Importar</button></div>
+        </form>
+    </div>
+{% endblock %}
