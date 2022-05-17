@@ -8,13 +8,14 @@
 
 {% block content %}
     <div class="container">
-        <form > <!-- todo: configurar o formulario -->
+        <form method="post" enctype="multipart/form-data"> 
+            {{ csrf_token }}
             <div class="h1 text-center strong"><strong>IMPORTAR TRANSAÇÕES</strong></div>
             <div class="mb-3">
-                <input class="form-control" type="file" id="formFile">
+                <input class="form-control" name="file" type="file" id="formFile">
                 <label for="formFile" class="form-label">Selecione o arquivo para realizar o upload</label>
             </div>
-            <div><button class="btn btn-primary">Importar</button></div>
+            <div><input class="btn btn-primary" type="submit" value="Importar"></div>
         </form>
     </div>
 {% endblock %}
