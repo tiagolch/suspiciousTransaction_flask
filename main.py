@@ -12,9 +12,9 @@ def upload():
     if request.method == 'POST':
         file = request.files['file']
         filename = file.filename
-        print(filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER']) + filename)
-        return filename, 200
+        print(f'Arquivo: {filename} Tamanho: {os.path.getsize(app.config["UPLOAD_FOLDER"] + filename)}')
+        return f'{filename} de tamanho {os.path.getsize(app.config["UPLOAD_FOLDER"] + filename)} bytes Importado com sucesso!', 200
     return render_template('upload.html')
 
 
